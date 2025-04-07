@@ -1,18 +1,15 @@
+@use 'mixins' as mixins;
+
 .container {
   width: 100%;
-  max-width: 1536px;
+  max-width: 1390px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 140px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
-  @include vp-768 {
-    padding: 0 20px;
-  }
-
-  @include vp-1024 {
+  @include mixins.vp-1304 {
     padding: 0 40px;
-  }
-
-  @include vp-1304 {
-    padding: 0 156px;
   }
 }

@@ -1,11 +1,16 @@
 /* Global */
 /* ------------------------------------ */
-@import './global/_normalize';
-@import './global/_mixins';
-@import './global/_variables';
-@import './global/_reboot';
-@import './global/_container';
-@import './global/_visually-hidden';
+@use './global/_normalize';
+@use './global/_variables';
+@use './global/_mixins';
+@use './global/_reboot';
+@use './global/_container';
+@use './global/_visually-hidden';
 
 /* Blocks */
 /* ------------------------------------ */
+@use './blocks/header';
+@use './blocks/btn';
+@use './blocks/items';
+@use './blocks/card';
+@use './blocks/footer';
