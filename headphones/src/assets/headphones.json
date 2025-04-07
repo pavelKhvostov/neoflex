@@ -1,0 +1,65 @@
+[
+  {
+    "id": 0,
+    "imageUrl": "img/headphones-1.png",
+    "title": "Apple BYZ S852I",
+    "price": 2927,
+    "rate": 4.7
+  },
+  {
+    "id": 1,
+    "imageUrl": "img/headphones-2.png",
+    "title": "Apple EarPods",
+    "price": 2327,
+    "rate": 4.5
+  },
+  {
+    "id": 2,
+    "imageUrl": "img/headphones-3.png",
+    "title": "Apple EarPods",
+    "price": 2327,
+    "rate": 4.5
+  },
+  {
+    "id": 4,
+    "imageUrl": "img/headphones-1.png",
+    "title": "Apple BYZ S852I",
+    "price": 2927,
+    "rate": 4.7
+  },
+  {
+    "id": 5,
+    "imageUrl": "img/headphones-2.png",
+    "title": "Apple EarPods",
+    "price": 2327,
+    "rate": 4.5
+  },
+  {
+    "id": 6,
+    "imageUrl": "img/headphones-3.png",
+    "title": "Apple EarPods",
+    "price": 2327,
+    "rate": 4.5
+  },
+  {
+    "id": 7,
+    "imageUrl": "img/headphones-4.png",
+    "title": "Apple AirPods",
+    "price": 9527,
+    "rate": 4.7
+  },
+  {
+    "id": 8,
+    "imageUrl": "img/headphones-5.png",
+    "title": "GERLAX GH-04",
+    "price": 6527,
+    "rate": 4.7
+  },
+  {
+    "id": 9,
+    "imageUrl": "img/headphones-6.png",
+    "title": "BOROFONE BO4",
+    "price": 7527,
+    "rate": 4.7
+  }
+]
