@@ -1,7 +1,11 @@
-export function Header() {
+import { Link } from 'react-router-dom';
+
+export function Header({ totalCount }) {
   return (
-    <div className='header'>
-      <h2 className='header__logo'>QPICK</h2>
+    <header className='header'>
+      <Link to='/'>
+        <h2 className='header__logo'>QPICK</h2>
+      </Link>
       <div className='header__inner'>
         <button type='button' className='btn header__icon-wrap'>
           <svg
@@ -19,7 +23,7 @@ export function Header() {
           </svg>
           <span className='header__count'>0</span>
         </button>
-        <button type='button' className=' btn header__icon-wrap'>
+        <Link to='/order' className=' btn header__icon-wrap'>
           <svg
             className='header__icon-cart icon'
             width='24'
@@ -34,9 +38,9 @@ export function Header() {
             />
           </svg>
 
-          <span className='header__count'>0</span>
-        </button>
+          <span className='header__count'>{totalCount}</span>
+        </Link>
       </div>
-    </div>
+    </header>
   );
 }

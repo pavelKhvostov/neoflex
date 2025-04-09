@@ -1,0 +1,41 @@
+.form-order {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__inner-group {
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    gap: 20px;
+  }
+
+  &__col-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__inner-bottom {
+    display: flex;
+  }
+
+  &__btn {
+    cursor: pointer;
+    background-color: #101010;
+    color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    border: none;
+    transition: transform ease-in-out, background-color 0.2s ease-in-out;
+    font-size: 17px;
+    line-height: 21px;
+
+    &:hover {
+      background-color: #2a2a2a;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}

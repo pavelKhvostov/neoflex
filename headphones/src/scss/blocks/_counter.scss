@@ -1,0 +1,26 @@
+.counter {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+
+  &__wrap {
+    background-color: #ffce7f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.1s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #ffb742;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}

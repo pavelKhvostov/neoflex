@@ -9,11 +9,88 @@
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
 
   &:hover {
     transform: translateY(-7px);
     background: #ffffff;
     box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  &__order {
+    border: none;
+    position: relative;
+    align-items: center;
+    padding: 26px 20px;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-7px);
+      background: #ffffff;
+      box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card__img {
+      margin: 0 23px 30px 0;
+      height: 136px;
+    }
+
+    .card__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 12px;
+    }
+
+    .counter {
+      position: absolute;
+      left: 33px;
+      bottom: 15px;
+    }
+
+    .card__title {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 21px;
+      color: #1c1c27;
+    }
+
+    .card__price {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      color: #aaaaaa;
+
+      &--double {
+        position: absolute;
+        color: #1c1c27;
+        right: 28px;
+        bottom: 21px;
+      }
+    }
+
+    .card__remove {
+      background-color: transparent;
+      border: none;
+      position: absolute;
+      cursor: pointer;
+      right: 28px;
+      top: 18px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
   }
 
   &__img {
@@ -58,6 +135,10 @@
     }
   }
 
+  &__bottom {
+    width: 100%;
+  }
+
   &__buy {
     font-weight: 600;
     font-size: 17px;
@@ -66,5 +147,15 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+    &--disabled {
+      display: none;
+    }
+
+    &:hover {
+      color: #5c5b5b;
+      transform: scale(1.1);
+    }
   }
 }

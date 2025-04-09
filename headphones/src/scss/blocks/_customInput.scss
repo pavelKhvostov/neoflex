@@ -1,0 +1,38 @@
+.custom-input {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 24px;
+    color: #838383;
+  }
+
+  &__error-text {
+    display: none;
+  }
+
+  &--error {
+    .custom-input__error-text {
+      display: block;
+      color: #e31313;
+    }
+
+    .custom-input__field {
+      background-color: #ffd9d9;
+    }
+  }
+
+  &__field {
+    padding: 10px;
+    border: 1px solid #101010;
+    border-radius: 15px;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+      background-color: #e6e6e6;
+    }
+  }
+}

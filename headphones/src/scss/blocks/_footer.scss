@@ -4,4 +4,63 @@
   background-color: #fff;
   padding: 30px;
   border-radius: 25px 25px 0 0;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+  &__logo {
+    margin: 0;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #101010;
+  }
+
+  &__nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__mid {
+    display: flex;
+    max-width: 427px;
+    width: 100%;
+    justify-content: space-between;
+
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: #000000;
+  }
+
+  &__lang {
+    display: flex;
+    gap: 17px;
+
+    &-btn {
+      background-color: transparent;
+      border: none;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      color: #101010;
+      cursor: pointer;
+
+      &--active {
+        color: #ffa542;
+        font-size: bold;
+      }
+    }
+  }
 }
