@@ -9,7 +9,11 @@
   flex-direction: column;
   min-height: 100vh;
 
-  @include mixins.vp-1304 {
+  @include mixins.vp-1390 {
     padding: 0 40px;
+  }
+
+  @include mixins.vp-768 {
+    padding: 0 15px;
   }
 }

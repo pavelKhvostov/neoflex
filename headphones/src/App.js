@@ -176,7 +176,7 @@ function App() {
       </div>
       <Modal active={modalActive} setActive={setModalActive} selectedItem={selectedItem} />
       <Modal active={modalOrder} setActive={setModalOrder}>
-        <FormOrder />
+        <FormOrder orders={orders} totalPrice={totalPrice} />
       </Modal>
     </div>
   );

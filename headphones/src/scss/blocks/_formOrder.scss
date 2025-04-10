@@ -1,15 +1,52 @@
+@use 'src/scss/global/mixins' as mixins;
+
 .form-order {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 770px;
   &__inner-group {
     justify-content: space-between;
     display: grid;
-    grid-template-columns: repeat(2, 400px);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+
+    @include mixins.vp-1024 {
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      margin: 0 0 30px;
+    }
   }
 
   &__col-right {
+    @include mixins.vp-1024 {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__animate {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    z-index: 1000;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 18px;
+    opacity: 0;
+    pointer-events: none;
+    animation: fadeInOut 4s ease-in-out;
+  }
+
+  &--animate--active &__col-right {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -17,6 +54,12 @@
 
   &__inner-bottom {
     display: flex;
+    gap: 30px;
+
+    @include mixins.vp-768 {
+      gap: 10px;
+      flex-direction: column;
+    }
   }
 
   &__btn {
@@ -30,12 +73,45 @@
     font-size: 17px;
     line-height: 21px;
 
-    &:hover {
-      background-color: #2a2a2a;
-    }
+    &--active {
+      cursor: default;
+      background-color: #b4b4b4;
+      animation: btnSubmited 2s infinite;
 
-    &:active {
-      transform: scale(0.95);
+      &:hover {
+        background-color: #b4b4b4;
+      }
+
+      &:active {
+        transform: scale(1);
+      }
     }
+  }
+}
+
+@keyframes btnSubmited {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
