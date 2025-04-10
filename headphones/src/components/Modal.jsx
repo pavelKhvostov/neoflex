@@ -5,14 +5,14 @@ export function Modal({ active, setActive, selectedItem, children }) {
         {children ? (
           children
         ) : (
-          <>
+          <div className='modal__wrap'>
             <img className='modal__img' src={selectedItem.imageUrl} alt='наушники' />
             <div className='modal__inner'>
               <h3 className='modal__title'>{selectedItem.title}</h3>
               <p className='modal__dect'>{selectedItem.decr}</p>
               <span className='modal__price'>{selectedItem.price} ₽</span>
             </div>
-          </>
+          </div>
         )}
       </div>
     </div>

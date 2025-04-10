@@ -1,3 +1,5 @@
+@use 'src/scss/global/mixins' as mixins;
+
 .modal {
   position: fixed;
   z-index: 1000;
@@ -48,5 +50,14 @@
     align-items: center;
     margin: 0 auto;
     justify-content: space-between;
+  }
+
+  &__wrap {
+    display: flex;
+    height: 100%;
+
+    @include mixins.vp-768 {
+      flex-direction: column;
+    }
   }
 }

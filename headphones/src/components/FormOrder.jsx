@@ -2,7 +2,7 @@ import { use, useEffect, useState } from 'react';
 
 export function FormOrder({ orders, totalPrice }) {
   const [dis, setDis] = useState(false);
-  const [submit, setSubmit] = useState(false);
+  const [submit, setSubmit] = useState(true);
   const initialFormData = {
     tel: '',
     name: '',
