@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/neoflex/static/css/main.a6e6a9ec.css",
-    "main.js": "/neoflex/static/js/main.adff1ac0.js",
+    "main.js": "/neoflex/static/js/main.cafd24d6.js",
     "index.html": "/neoflex/index.html",
     "main.a6e6a9ec.css.map": "/neoflex/static/css/main.a6e6a9ec.css.map",
-    "main.adff1ac0.js.map": "/neoflex/static/js/main.adff1ac0.js.map"
+    "main.cafd24d6.js.map": "/neoflex/static/js/main.cafd24d6.js.map"
   },
   "entrypoints": [
     "static/css/main.a6e6a9ec.css",
-    "static/js/main.adff1ac0.js"
+    "static/js/main.cafd24d6.js"
   ]
 }
