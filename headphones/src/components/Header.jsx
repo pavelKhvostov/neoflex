@@ -7,7 +7,7 @@ export function Header({ totalCount }) {
         <h2 className='header__logo'>QPICK</h2>
       </Link>
       <div className='header__inner'>
-        <button type='button' className='btn header__icon-wrap'>
+        <Link to='/favorite' type='button' className='btn header__icon-wrap'>
           <svg
             className='header__icon-heart icon'
             width='23'
@@ -22,7 +22,7 @@ export function Header({ totalCount }) {
             />
           </svg>
           <span className='header__count'>0</span>
-        </button>
+        </Link>
         <Link to='/order' className=' btn header__icon-wrap'>
           <svg
             className='header__icon-cart icon'

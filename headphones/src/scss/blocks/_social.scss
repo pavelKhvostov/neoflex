@@ -7,4 +7,35 @@
     align-items: center;
     gap: 17px;
   }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    color: #000;
+
+    &:hover .social__icon--active,
+    &:focus-visible .social__icon--active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      transform: scale(1.1);
+    }
+    &:hover .social__icon,
+    &:focus-visible .social__icon {
+      transform: scale(1.1);
+    }
+  }
+
+  &__icon {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__icon--active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ffa542;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
 }

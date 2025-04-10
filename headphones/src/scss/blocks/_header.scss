@@ -30,4 +30,11 @@
     text-align: center;
     color: #ffffff;
   }
+
+  &__icon-wrap {
+    &:hover,
+    &:focus-visible {
+      transform: scale(1.1);
+    }
+  }
 }

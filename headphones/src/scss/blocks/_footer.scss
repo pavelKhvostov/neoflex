@@ -57,10 +57,26 @@
   }
 
   &__link {
+    position: relative;
     font-weight: 400;
     font-size: 17px;
     line-height: 21px;
     color: #000000;
+
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #333;
+      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+      transition: clip-path 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
   }
 
   &__lang {

@@ -1,0 +1,52 @@
+@use 'src/scss/global/mixins' as mixins;
+
+.contact {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mixins.vp-1024 {
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+  }
+
+  &__text {
+    color: #ffa542;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__frame {
+    max-width: 600px;
+    height: 500px;
+
+    @include mixins.vp-768 {
+      width: 300px;
+      height: 400px;
+    }
+
+    @include mixins.vp-380 {
+      width: 200px;
+      height: 300px;
+    }
+  }
+}

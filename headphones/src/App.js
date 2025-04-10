@@ -19,6 +19,7 @@ function App() {
   const [modalActive, setModalActive] = useState(false);
   const [selectedItem, setSelectedItem] = useState({});
   const [modalOrder, setModalOrder] = useState(false);
+  const [contactModal, setContactModal] = useState(false);
 
   const onClickItemToModal = (item) => {
     setSelectedItem(item);
@@ -141,7 +142,7 @@ function App() {
 
         <Routes>
           <Route
-            path='/'
+            path=''
             element={
               <main>
                 <Home
@@ -155,7 +156,7 @@ function App() {
             }
           />
           <Route
-            path='/order'
+            path='order'
             element={
               <main>
                 <Order
@@ -172,11 +173,34 @@ function App() {
           />
         </Routes>
 
-        <Footer />
+        <Footer setContactModal={setContactModal} />
       </div>
       <Modal active={modalActive} setActive={setModalActive} selectedItem={selectedItem} />
       <Modal active={modalOrder} setActive={setModalOrder}>
         <FormOrder orders={orders} totalPrice={totalPrice} />
+      </Modal>
+      <Modal active={contactModal} setActive={setContactModal}>
+        <div className='contact'>
+          <div className='contact__left'>
+            <a href='tel:+79535795260' className='contact__link'>
+              Контактый центр: <span className='contact__text'>+7(953)579 52-60</span>
+            </a>
+            <a href='mailto:pavel.khvostov@inbox.ru' className='contact__link'>
+              По всем вопросам: <span className='contact__text'>pavel.khvostov@inbox.ru</span>
+            </a>
+          </div>
+          <div className='contact__right'>
+            Мы находимся:{' '}
+            <iframe
+              className='contact__frame'
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16603032.187165588!2d63.28899933602043!3d59.470804446739685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ca3481ab2b8a647%3A0x43d1a72a9a079414!2z0KLQsNC50LzRi9GA0YHQutC40Lkg0LDQstGC0L7QvdC-0LzQvdGL0Lkg0L7QutGA0YPQsywg0JrRgNCw0YHQvdC-0Y_RgNGB0LrQuNC5INC60YDQsNC5!5e0!3m2!1sru!2sru!4v1744321671428!5m2!1sru!2sru'
+              style={{ border: 0 }}
+              allowfullscreen=''
+              loading='lazy'
+              referrerpolicy='no-referrer-when-downgrade'
+            ></iframe>
+          </div>
+        </div>
       </Modal>
     </div>
   );

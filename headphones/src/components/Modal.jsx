@@ -6,7 +6,11 @@ export function Modal({ active, setActive, selectedItem, children }) {
           children
         ) : (
           <div className='modal__wrap'>
-            <img className='modal__img' src={selectedItem.imageUrl} alt='наушники' />
+            <img
+              className='modal__img'
+              src={`${process.env.PUBLIC_URL}/${selectedItem.imageUrl}`}
+              alt='наушники'
+            />
             <div className='modal__inner'>
               <h3 className='modal__title'>{selectedItem.title}</h3>
               <p className='modal__dect'>{selectedItem.decr}</p>

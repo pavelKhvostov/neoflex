@@ -57,7 +57,7 @@ export function Card({
         </ContentLoader>
       ) : (
         <>
-          <img className='card__img' src={imageUrl} alt='наушники' />
+          <img className='card__img' src={`${process.env.PUBLIC_URL}/${imageUrl}`} alt='наушники' />
           <div className='card__bottom'>
             <div className='card__inner'>
               <h3 className='card__title'>{title}</h3>

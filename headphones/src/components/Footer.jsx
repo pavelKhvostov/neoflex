@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Social } from './Social';
 
-export function Footer() {
+export function Footer({ setContactModal }) {
   return (
     <footer className='footer'>
       <h2 className='footer__logo'>QPICK</h2>
@@ -18,7 +18,7 @@ export function Footer() {
             </Link>
           </li>
           <li className='footer__item'>
-            <a href='#' className='footer__link'>
+            <a onClick={() => setContactModal(true)} href='#' className='footer__link'>
               Контакты
             </a>
           </li>
