@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export function Header({ totalCount }) {
+export function Header({ totalCount, totalFvorite }) {
   return (
     <header className='header'>
       <Link to='/'>
@@ -21,7 +21,7 @@ export function Header({ totalCount }) {
               fill='#838383'
             />
           </svg>
-          <span className='header__count'>0</span>
+          <span className='header__count'>{totalFvorite}</span>
         </Link>
         <Link to='/order' className=' btn header__icon-wrap'>
           <svg

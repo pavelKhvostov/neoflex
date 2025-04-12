@@ -8,9 +8,9 @@ export function Footer({ setContactModal }) {
       <div className='footer__mid'>
         <ul className='footer__nav'>
           <li className='footer__item'>
-            <a href='#' className='footer__link'>
+            <Link to='/favorite' href='#' className='footer__link'>
               Избранное
-            </a>
+            </Link>
           </li>
           <li className='footer__item'>
             <Link to='/order' className='footer__link'>

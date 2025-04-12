@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { safeGet, safeSet, safeRemove } from '../utils/storageUtils';
 
 export function Counter({
   setIsActive,
@@ -11,14 +12,14 @@ export function Counter({
   rate,
 }) {
   const [count, setCount] = useState(() => {
-    const savedCount = localStorage.getItem(`count_${id}`);
+    const savedCount = safeGet(`count_${id}`, 0);
     return savedCount ? Number(savedCount) : 1;
   });
 
   const onClickPlus = () => {
     const newCount = count + 1;
     setCount(newCount);
-    localStorage.setItem(`count_${id}`, newCount);
+    safeSet(`count_${id}`, newCount);
   };
 
   const handleClickPlus = (e) => {
@@ -38,24 +39,24 @@ export function Counter({
   const onClickMinus = () => {
     if (count <= 1) {
       setIsActive(false);
-      localStorage.removeItem(`count_${id}`);
-      localStorage.removeItem(`isActive_${id}`);
+      safeRemove(`count_${id}`);
+      safeRemove(`isActive_${id}`);
     } else {
       const newCount = count - 1;
       setCount(newCount);
-      localStorage.setItem(`count_${id}`, newCount);
+      safeSet(`count_${id}`, newCount);
     }
   };
 
   useEffect(() => {
-    const savedCount = localStorage.getItem(`count_${id}`);
+    const savedCount = safeGet(`count_${id}`, 0);
     if (savedCount) {
       setCount(Number(savedCount));
     }
   }, [id]);
 
   useEffect(() => {
-    localStorage.setItem(`count_${id}`, count);
+    safeSet(`count_${id}`, count);
   }, [count, id]);
 
   return (

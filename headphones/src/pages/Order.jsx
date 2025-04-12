@@ -35,7 +35,7 @@ export function Order({
                 <span className='order__text'>ИТОГО</span>
                 <span className='order__price'>₽ {totalPrice}</span>
               </div>
-              <button onClick={() => setModalOrder(true)} className='order__btn'>
+              <button onClick={() => setModalOrder(true)} className='order__btn' type='button'>
                 Перейти к оформлению
               </button>
             </div>

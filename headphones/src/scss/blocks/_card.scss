@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   padding: 26px 20px;
   background-color: #fff;
   border-radius: 30px;
@@ -16,6 +17,28 @@
     transform: translateY(-7px);
     background: #ffffff;
     box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  &__favorite {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(177, 177, 177);
+    transition: transform 0.1s ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+
+    &--active {
+      color: red;
+    }
   }
 
   &__order {

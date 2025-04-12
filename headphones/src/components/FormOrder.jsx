@@ -1,4 +1,5 @@
-import { use, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { safeGet } from '../utils/storageUtils';
 
 export function FormOrder({ orders, totalPrice }) {
   const [dis, setDis] = useState(false);
@@ -11,7 +12,7 @@ export function FormOrder({ orders, totalPrice }) {
     item: orders.reduce((acc, item) => {
       acc[item.id] = {
         name: item.title,
-        count: localStorage.getItem(`count_${item.id}`),
+        count: safeGet(`count_${item.id}`, null),
       };
       return acc;
     }, {}),
@@ -23,7 +24,7 @@ export function FormOrder({ orders, totalPrice }) {
     const newItemData = orders.reduce((acc, item) => {
       acc[item.id] = {
         name: item.title,
-        count: localStorage.getItem(`count_${item.id}`),
+        count: safeGet(`count_${item.id}`, null),
       };
       return acc;
     }, {});
