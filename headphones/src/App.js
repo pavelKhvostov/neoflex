@@ -227,10 +227,10 @@ function App() {
         <div className='contact'>
           <div className='contact__left'>
             <a href='tel:+79535795260' className='contact__link'>
-              Контактый центр: <span className='contact__text'>+7(953)579 52-60</span>
+              Контактый центр: <span className='contact__text'>+7(999)999 99-99</span>
             </a>
             <a href='mailto:pavel.khvostov@inbox.ru' className='contact__link'>
-              По всем вопросам: <span className='contact__text'>pavel.khvostov@inbox.ru</span>
+              По всем вопросам: <span className='contact__text'>test.test@inbox.ru</span>
             </a>
           </div>
           <div className='contact__right'>
