@@ -3,7 +3,7 @@ import { safeGet } from '../utils/storageUtils';
 
 export function FormOrder({ orders, totalPrice }) {
   const [dis, setDis] = useState(false);
-  const [submit, setSubmit] = useState(true);
+  const [submit, setSubmit] = useState(false);
   const initialFormData = {
     tel: '',
     name: '',
