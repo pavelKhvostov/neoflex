@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/neoflex/static/css/main.d83f2a56.css",
-    "main.js": "/neoflex/static/js/main.81feda7f.js",
+    "main.css": "/neoflex/static/css/main.61b6bd9e.css",
+    "main.js": "/neoflex/static/js/main.17bca09e.js",
     "index.html": "/neoflex/index.html",
-    "main.d83f2a56.css.map": "/neoflex/static/css/main.d83f2a56.css.map",
-    "main.81feda7f.js.map": "/neoflex/static/js/main.81feda7f.js.map"
+    "main.61b6bd9e.css.map": "/neoflex/static/css/main.61b6bd9e.css.map",
+    "main.17bca09e.js.map": "/neoflex/static/js/main.17bca09e.js.map"
   },
   "entrypoints": [
-    "static/css/main.d83f2a56.css",
-    "static/js/main.81feda7f.js"
+    "static/css/main.61b6bd9e.css",
+    "static/js/main.17bca09e.js"
   ]
 }
